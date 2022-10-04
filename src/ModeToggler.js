@@ -14,7 +14,7 @@ function handleClick() {
     <div>
       {darkModeOn ? darkMode : lightMode}
       <button onClick={handleClick}>
-        Click Me
+        Click Mee
       </button>
     </div>
   )
