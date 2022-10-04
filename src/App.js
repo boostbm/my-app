@@ -18,7 +18,7 @@ function Nav () {
 }
 const data = {
   heading: "99% off all items!",
-  callToAction: "Everything Must Go!"
+  callToAction: "Everything Must Go!!"
 };
 
 export function App() {
