@@ -3,6 +3,8 @@ import './App.css';
 import Btn from './Btn';
 import ModeToggler from './ModeToggler';
 import PromoHeading from './PromoHeading';
+import Child from './Child';
+
 
 function Header (props) {
   return <h1> Hello {props.name}, Your color is {props.color}</h1>;
@@ -21,6 +23,8 @@ const data = {
   callToAction: "Everything Must Go!!"
 };
 
+const date = new Date ();
+
 export function App() {
   return (
     <div>
@@ -28,6 +32,7 @@ export function App() {
       <Nav/>
       <ModeToggler />
       <PromoHeading heading ={data.heading} callToAction={data.callToAction}/>
+      <Child message={date.toLocaleTimeString()}/>
   </div>
   );
 }
