@@ -1,9 +1,11 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Btn from './Btn';
 import ModeToggler from './ModeToggler';
 import PromoHeading from './PromoHeading';
 import Child from './Child';
+
 
 
 function Header (props) {
@@ -18,21 +20,18 @@ function Nav () {
     <li>Contact</li>
   </ul>
 }
-const data = {
-  heading: "99% off all items!",
-  callToAction: "Everything Must Go!!"
-};
 
-const date = new Date ();
 
 export function App() {
+  const [word, setWord] = React.useState('Eat')
+  
+  function handleClick() {
+    setWord('Drink')
+  } 
   return (
-    <div>
-      <Header name="David" color="blue"/>
-      <Nav/>
-      <ModeToggler />
-      <PromoHeading heading ={data.heading} callToAction={data.callToAction}/>
-      <Child message={date.toLocaleTimeString()}/>
+    <div className='App'>
+      <PromoHeading message = {word + " at Little Lemon"}/>
+      <button onClick={handleClick}>Click me</button>
   </div>
   );
 }
